@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -74,6 +73,14 @@ const Index = () => {
             >
               <Github className="mr-2 h-4 w-4" />
               GitHub
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all duration-300"
+              onClick={() => window.location.href = '/blog'}
+            >
+              Read Blog
             </Button>
           </div>
         </div>
