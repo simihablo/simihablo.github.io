@@ -108,6 +108,7 @@ const Index = () => {
                 an advocate for <span className="text-orange-400 font-semibold">Layer5</span> projects like Kanvas, 
                 I'm deeply involved in the cloud native ecosystem.
               </p>
+              <p>But life’s not all code and containers.</p>
               <p className="text-lg text-blue-100 leading-relaxed">
                 When I'm not managing Kubernetes clusters or writing Go code, you'll find me 
                 hiking through Mexico's stunning landscapes or sharing my adventures with my beloved dogs.
@@ -116,6 +117,7 @@ const Index = () => {
             <div className="bg-gradient-to-br from-blue-800/50 to-orange-900/30 p-8 rounded-2xl border border-blue-500/20">
               <h3 className="text-2xl font-bold text-yellow-400 mb-6">What I Do</h3>
               <ul className="space-y-3 text-blue-100">
+                When I’m not deep in YAML or container logs...
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                   Run local tech meetup groups
@@ -226,7 +228,7 @@ const Index = () => {
               <Github className="mr-2 h-5 w-5" />
               GitHub
             </Button>
-            <Button 
+{/*             <Button 
               size="lg"
               variant="outline"
               className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white transition-all duration-300 hover:scale-105"
@@ -234,7 +236,7 @@ const Index = () => {
             >
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -243,7 +245,7 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-blue-500/20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-blue-300">
-            © 2024 Mericio • Infrastructure Engineer • Guatemala 🇬🇹
+            © 2025 Mericio • Infrastructure Engineer • Guatemala 🇬🇹
           </p>
           <p className="text-sm text-blue-400 mt-2">
             Built with ❤️ using React, TypeScript, and Tailwind CSS
