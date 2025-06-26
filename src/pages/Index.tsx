@@ -21,6 +21,11 @@ const Index = () => {
       tech: ["Community", "Speaking", "Workshops"]
     },
     {
+      title: "Tu primera red neuronal",
+      description: "Este codigo, actualizado al 4 de marzo de 2021, sirve como soporte para el video Tu primera red neuronal: https://youtu.be/UNFFLJPW7KQ <br /> Si deja de funcionar por algun motivo, deja un issue en github o un comentario en el video. Ya no es necesario bajar la libreria jscolor, ya viene como parte del codigo usando un CDN :)",
+      tech: ["Video", "Automation", "Encoding", "Networks"]
+    },
+    {
       title: "MeshMate",
       description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using <a href='docs.kanvas.new'>Kanvas</a> for cloud native applications.",
       tech: ["Kanvas", "Infrastructure", "Visualization"]
