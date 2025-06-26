@@ -12,8 +12,8 @@ const Index = () => {
   const projects = [
     {
       title: "CNCF Meshery Contributor",
-      description: "Contributing to the cloud native management plane for service meshes and their workloads.",
-      tech: ["Go", "Kubernetes", "Service Mesh", "CNCF"]
+      description: "Contributing to the cloud native management plane for visual workloads and configuration management.",
+      tech: ["Go", "Kubernetes", "Azure","GCP","AWS", "CNCF"]
     },
     {
       title: "Guatemala Tech Meetup",
@@ -21,8 +21,8 @@ const Index = () => {
       tech: ["Community", "Speaking", "Workshops"]
     },
     {
-      title: "Layer5 & Kanvas Advocate",
-      description: "Infrastructure management and visualization using Kanvas for cloud native applications.",
+      title: "MeshMate",
+      description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using <a href='docs.kanvas.new'>Kanvas</a> for cloud native applications.",
       tech: ["Kanvas", "Infrastructure", "Visualization"]
     }
   ];
