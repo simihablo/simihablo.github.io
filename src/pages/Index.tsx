@@ -117,7 +117,7 @@ const Index = () => {
             <div className="bg-gradient-to-br from-blue-800/50 to-orange-900/30 p-8 rounded-2xl border border-blue-500/20">
               <h3 className="text-2xl font-bold text-yellow-400 mb-6">What I Do</h3>
               <ul className="space-y-3 text-blue-100">
-                When I’m not deep in YAML or container logs...
+                <p>When I’m not deep in YAML or container logs...</p>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                   Run local tech meetup groups
