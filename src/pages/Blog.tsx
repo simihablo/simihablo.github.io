@@ -55,6 +55,8 @@ const Blog = () => {
     }
   };
 
+  console.log('Blog component rendering');
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
