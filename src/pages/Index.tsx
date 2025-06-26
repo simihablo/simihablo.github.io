@@ -114,7 +114,7 @@ const Index = () => {
                 an advocate for <span className="text-orange-400 font-semibold">Layer5</span> projects like Kanvas, 
                 I'm deeply involved in the cloud native ecosystem.
               </p>
-              <p>But life’s not all code and containers.</p>
+              <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">But life’s not all code and containers.</p>
               <p className="text-lg text-blue-100 leading-relaxed">
                 When I'm not managing Kubernetes clusters or writing Go code, you'll find me 
                 hiking through Mexico's stunning landscapes or sharing my adventures with my beloved dogs.
@@ -122,7 +122,7 @@ const Index = () => {
             </div>
             <div className="bg-gradient-to-br from-blue-800/50 to-orange-900/30 p-8 rounded-2xl border border-blue-500/20">
               <h3 className="text-2xl font-bold text-yellow-400 mb-6">What I Do</h3>
-              <p>When I’m not deep in YAML or container logs...</p>
+              <p  className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed" >When I’m not deep in YAML or container logs...</p>
 
               <ul className="space-y-3 text-blue-100">
                 <li className="flex items-center gap-3">
