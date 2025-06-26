@@ -47,7 +47,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-orange-500/10"></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-300 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-orange-500 to-blue-300 bg-clip-text text-transparent">
               Mericio
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-4">
