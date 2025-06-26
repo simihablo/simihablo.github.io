@@ -27,7 +27,7 @@ const Index = () => {
     },
     {
       title: "MeshMate",
-      description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using <a href='docs.kanvas.new'>Kanvas</a> for cloud native applications.",
+      description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using Kanvas for cloud native applications.",
       tech: ["Kanvas", "Infrastructure", "Visualization"]
     }
   ];
@@ -37,7 +37,8 @@ const Index = () => {
     "Managing Infrastructure with Kanvas",
     "Contributing to Open Source Projects",
     "Kubernetes Best Practices",
-    "Life with Dogs & Tech"
+    "Life with Dogs",
+    "Camping and hiking in Honduras countryside"
   ];
 
   return (
@@ -82,7 +83,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all duration-300"
+              className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-black transition-all duration-300"
               onClick={() => window.location.href = '/blog'}
             >
               Read Blog
@@ -121,8 +122,9 @@ const Index = () => {
             </div>
             <div className="bg-gradient-to-br from-blue-800/50 to-orange-900/30 p-8 rounded-2xl border border-blue-500/20">
               <h3 className="text-2xl font-bold text-yellow-400 mb-6">What I Do</h3>
+              <p>When I’m not deep in YAML or container logs...</p>
+
               <ul className="space-y-3 text-blue-100">
-                <p>When I’m not deep in YAML or container logs...</p>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                   Run local tech meetup groups
@@ -222,7 +224,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-8 text-yellow-400">Let's Connect</h2>
           <p className="text-xl text-blue-200 mb-12 max-w-2xl mx-auto">
             Whether you want to discuss Kubernetes, open source contributions, or share hiking stories, 
-            I'd love to hear from you!
+            ¡Me encantaría saber de usted!
           </p>
           <div className="flex gap-6 justify-center">
             <Button 
