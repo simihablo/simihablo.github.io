@@ -41,6 +41,34 @@ const Index = () => {
     "Camping and hiking in Honduras countryside"
   ];
 
+ // Function to render text with hyperlinks
+  const renderDescriptionWithLinks = (description: string) => {
+    // Split by <br /> tags first
+    const parts = description.split('<br />');
+    
+    return parts.map((part, index) => (
+      <span key={index}>
+        {part.split(/(https?:\/\/[^\s]+)/g).map((segment, segIndex) => {
+          if (segment.match(/https?:\/\/[^\s]+/)) {
+            return (
+              <a
+                key={segIndex}
+                href={segment}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 hover:text-yellow-300 underline transition-colors"
+              >
+                {segment}
+              </a>
+            );
+          }
+          return segment;
+        })}
+        {index < parts.length - 1 && <br />}
+      </span>
+    ));
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       {/* Hero Section */}
@@ -110,8 +138,8 @@ const Index = () => {
                 building robust, scalable systems using cutting-edge cloud native technologies.
               </p>
               <p className="text-lg text-blue-100 leading-relaxed">
-                As a contributor to the CNCF project <span className="text-yellow-400 font-semibold">Meshery</span> and 
-                an advocate for <span className="text-orange-400 font-semibold">Layer5</span> projects like Kanvas, 
+                As a contributor to the CNCF project <span className="text-yellow-400 font-semibold"><a href="https://meshery.io">Meshery</a>,</span> and 
+                an advocate for <span className="text-orange-400 font-semibold"><a href="https://layer5.io">Layer5</a></span> projects like <a href="https://docs.kanvas.new">Kanvas</a>, 
                 I'm deeply involved in the cloud native ecosystem.
               </p>
               <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">But life’s not all code and containers.</p>
