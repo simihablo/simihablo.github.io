@@ -5,8 +5,8 @@ import { Badge } from '@/components/ui/badge';
 
 const Index = () => {
   const skills = [
-    "Kubernetes", "Linux", "Google Cloud Platform", "Golang", "Docker", 
-    "Terraform", "CI/CD", "Microservices", "Service Mesh", "Cloud Native"
+    "Kubernetes", "Meshery", "Linux", "Google Cloud Platform", "Golang", "Docker", 
+    "Terraform", "CI/CD", "Microservices", "Azure","AWS", "CNCF", "Cloud Native"
   ];
 
   const projects = [
