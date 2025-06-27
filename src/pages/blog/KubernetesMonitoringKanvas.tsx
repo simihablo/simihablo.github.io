@@ -14,7 +14,7 @@ const KubernetesMonitoringKanvas = () => {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
-          <Badge className="bg-blue-100 text-blue-800 border-blue-200 mb-4">
+          <Badge className="bg-blue-100 text-blue-800 border-blue-200 mb-4 flex items-center">
             Technical
           </Badge>
           <h1 className="text-4xl font-bold mb-4 text-white">
@@ -45,7 +45,7 @@ const KubernetesMonitoringKanvas = () => {
             Managing Kubernetes clusters without proper monitoring is like flying blind. You might be running smoothly today, but without visibility into your cluster's health, performance metrics, and resource utilization, you're setting yourself up for unexpected failures and inefficient resource usage.
           </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Enter <a href="docs.kanvas.new">Kanvas</a>: Visual Infrastructure Management</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Enter <a href="https://docs.kanvas.new">Kanvas</a>: Visual Infrastructure Management</h2>
           <p className="text-gray-700 mb-6">
             Kanvas stands out in the crowded field of infrastructure tools because it takes a visual-first approach to cloud native infrastructure management. Instead of wrestling with YAML files and command-line tools, Kanvas provides an intuitive drag-and-drop interface for designing, deploying, and managing cloud native applications.
           </p>
