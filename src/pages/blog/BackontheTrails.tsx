@@ -81,6 +81,7 @@ One of my goals for this trip was to learn more about the Sierra Norte’s commu
 
           <p className="text-gray-700 mb-8">
 My second journey through Oaxaca wasn’t as epic in distance or duration, but it was richer in connection and clarity. Walking those trails again with Max, Luna, and Charlie reminded me that adventure doesn’t have to be grand—it just has to be meaningful.          </p>
+            <p>And knowing us, it won’t be long before we find ourselves once more in the whispering forests of the Sierra Norte, discovering new memories on familiar ground.</p>
         </div>
 
         {/* Navigation */}
