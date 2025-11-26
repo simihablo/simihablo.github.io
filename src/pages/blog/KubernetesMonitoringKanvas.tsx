@@ -57,7 +57,7 @@ const KubernetesMonitoringKanvas = () => {
 </h2>
 
           <p className="text-gray-700 mb-6">
-            <a style="text-decoration: underline;" href="https://kanvas.new">Kanvas</a> stands out in the crowded field of infrastructure tools because it takes a visual-first approach to cloud native infrastructure management. Instead of wrestling with YAML files and command-line tools, Kanvas provides an intuitive drag-and-drop interface for designing, deploying, and managing cloud native applications.
+            <a style={{textDecoration: "underline"}} href="https://kanvas.new">Kanvas</a> stands out in the crowded field of infrastructure tools because it takes a visual-first approach to cloud native infrastructure management. Instead of wrestling with YAML files and command-line tools, Kanvas provides an intuitive drag-and-drop interface for designing, deploying, and managing cloud native applications.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Key Features That Make a Difference</h3>
