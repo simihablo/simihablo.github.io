@@ -54,7 +54,7 @@ People keep asking me, “Didn’t you just go?” Yes. And that’s exactly why
           <p className="text-gray-700 mb-6">
 The first expedition was thrilling and immersive, but also fast-paced. I realized afterward that I wanted to revisit certain villages, spend more time learning from the locals, and explore trails that didn’t fit into the original itinerary. Plus, Max had developed an adorable habit of perking up every time he saw my hiking pack—how could I resist that?          </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Day 1: Returning to Benito Juárez— Familiar Faces, New Trails</h3></h3>
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Day 1: Returning to Benito Juárez— Familiar Faces, New Trails</h3>
           <p className="text-gray-700 mb-6">
 This time, I planned a shorter but richer journey: three days in the Sierra Norte, with an emphasis on cultural experiences, dog-friendly eco-cabins, and slow wandering rather than distance goals.          </p>
 
@@ -68,11 +68,9 @@ We spent the night in one of the village’s eco-cabins, listening to the gentle
 
           <p className="text-gray-700 mb-6">
 One of my goals for this trip was to learn more about the Sierra Norte’s community-run conservation efforts. With the help of a local guide—someone who had recognized us from Lachatao—we arranged a visit to a small cooperative focused on sustainable forestry and herbal medicine.          </p>
-<p>While I asked questions and took notes, the dogs were content being the unofficial mascots of the day. Luna made herself at home immediately, curling up under a table during a presentation, and Charlie followed one of the elders like a faithful apprentice.          </p>
-</p>
+<p className="text-gray-700 mb-6">While I asked questions and took notes, the dogs were content being the unofficial mascots of the day. Luna made herself at home immediately, curling up under a table during a presentation, and Charlie followed one of the elders like a faithful apprentice.</p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What I Learned From Returning</h2>
-          <p className="text-gray-700 mb-6">
           <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
             <li>1. Every trail feels new the second time.<strong>Even the familiar looks different when you slow down. With fewer miles to cover, I noticed small things: new wildflowers, bird calls I’d missed before, and how the dogs seemed more attuned to the environment when we weren’t pushing forward.</strong></li>
             <li>2. Dogs remember joy.<strong>My dogs recognized certain spots—especially streams—and bolted toward them with an excitement that made my heart swell. Their pure enthusiasm reminded me that the outdoors isn’t just an escape; it’s a source of joy we can revisit.</strong></li>
