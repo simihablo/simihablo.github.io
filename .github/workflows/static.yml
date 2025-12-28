@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
+      pull-requests: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -23,6 +24,80 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Run server tests with coverage
+        id: server_tests
+        run: |
+          echo "Running server tests..."
+          if make server-tests > server-tests-output.txt 2>&1; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "Tests passed ✅" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "Tests failed ❌" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+          
+          # Extract coverage percentage
+          COVERAGE=$(grep "total:" server-tests-output.txt | awk '{print $3}')
+          echo "coverage=$COVERAGE" >> $GITHUB_OUTPUT
+          
+          # Display full output
+          cat server-tests-output.txt
+          
+          # Display coverage summary
+          echo "## Coverage Report" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          grep -A 100 "go tool cover" server-tests-output.txt | tail -n +2 >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: |
+            server/coverage.out
+            server-tests-output.txt
+          retention-days: 30
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const output = fs.readFileSync('server-tests-output.txt', 'utf8');
+            
+            // Extract test results
+            const coverageMatch = output.match(/total:.*?\((.*?)\)\s+(\d+\.\d+%)/);
+            const coverage = coverageMatch ? coverageMatch[2] : 'N/A';
+            const status = '${{ steps.server_tests.outputs.status }}';
+            const statusEmoji = status === 'success' ? '✅' : '❌';
+            
+            // Get coverage details
+            const coverageDetails = output.split('go tool cover -func=coverage.out')[1] || '';
+            
+            const statusText = status === 'success' ? 'PASSED' : 'FAILED';
+            
+            const body = "## Server Tests Report " + statusEmoji + "\n\n" +
+              "**Status:** " + statusText + "\n" +
+              "**Coverage:** " + coverage + "\n\n" +
+              "### Coverage Details\n```\n" + coverageDetails.trim() + "\n```\n\n" +
+              "<details>\n<summary>Full Test Output</summary>\n\n```\n" + output + "\n```\n</details>";
+            
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
 
       - name: Install dependencies and build
         run: |

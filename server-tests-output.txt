@@ -1,0 +1,20 @@
+Running server tests with coverage...
+cd server && go test -v -coverprofile=coverage.out -covermode=atomic ./...
+=== RUN   TestHealthHandler
+--- PASS: TestHealthHandler (0.00s)
+=== RUN   TestGreetingHandler
+=== RUN   TestGreetingHandler/with_name_parameter
+=== RUN   TestGreetingHandler/without_name_parameter
+=== RUN   TestGreetingHandler/with_Spanish_name
+--- PASS: TestGreetingHandler (0.00s)
+    --- PASS: TestGreetingHandler/with_name_parameter (0.00s)
+    --- PASS: TestGreetingHandler/without_name_parameter (0.00s)
+    --- PASS: TestGreetingHandler/with_Spanish_name (0.00s)
+PASS
+coverage: 64.3% of statements
+ok  	github.com/simihablo/simihablo.github.io/server	0.003s	coverage: 64.3% of statements
+cd server && go tool cover -func=coverage.out
+github.com/simihablo/simihablo.github.io/server/main.go:16:	HealthHandler	100.0%
+github.com/simihablo/simihablo.github.io/server/main.go:26:	GreetingHandler	100.0%
+github.com/simihablo/simihablo.github.io/server/main.go:39:	main		0.0%
+total:								(statements)	64.3%
