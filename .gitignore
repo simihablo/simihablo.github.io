@@ -25,3 +25,6 @@ dist-ssr
 
 # Go coverage files
 *.out
+
+# Test output files
+server-tests-output.txt
