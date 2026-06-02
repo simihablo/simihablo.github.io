@@ -1,4 +1,4 @@
-import { Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, ArrowDown, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +29,21 @@ const Index = () => {
       title: "MeshMate",
       description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using Kanvas for cloud native applications.",
       tech: ["Kanvas", "Infrastructure", "Visualization"]
+    },
+    {
+      title: "Kubernetes Home Lab",
+      description: "Self-hosted Kubernetes cluster running on bare metal for personal experimentation, learning, and running production-grade workloads at home.",
+      tech: ["Kubernetes", "Bare Metal", "Networking", "Linux"]
+    },
+    {
+      title: "GCP Infrastructure Automation",
+      description: "Terraform modules and CI/CD pipelines for automating Google Cloud Platform infrastructure provisioning and management at scale.",
+      tech: ["Terraform", "GCP", "CI/CD", "IaC"]
+    },
+    {
+      title: "Open Source DevRel",
+      description: "Developer relations work for the CNCF ecosystem — creating tutorials, writing documentation, and speaking at community events to grow cloud native adoption.",
+      tech: ["CNCF", "Community", "Documentation", "Speaking"]
     }
   ];
 
@@ -77,7 +92,7 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-orange-500 to-blue-300 bg-clip-text text-transparent">
-              Mericio
+              Mericio Salazar
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-4">
               Infrastructure Engineer
@@ -111,6 +126,23 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
+              className="border-slate-400 text-slate-200 hover:bg-slate-600 hover:text-white transition-all duration-300"
+              onClick={() => window.open('https://x.com/simihablo', '_blank')}
+            >
+              <X className="mr-2 h-4 w-4" />
+              X
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-orange-600 text-orange-300 hover:bg-orange-600 hover:text-white transition-all duration-300"
+              onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
+            >
+              Reddit
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
               className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-black transition-all duration-300"
               onClick={() => window.location.href = '/blog'}
             >
@@ -134,7 +166,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-blue-100 leading-relaxed">
-                I'm an infrastructure engineer based in beautiful Guatemala, passionate about 
+                I'm <span className="text-yellow-400 font-semibold">Mericio Salazar</span>, an infrastructure engineer based in beautiful Guatemala, passionate about 
                 building robust, scalable systems using cutting-edge cloud native technologies.
               </p>
               <p className="text-lg text-blue-100 leading-relaxed">
@@ -142,10 +174,13 @@ const Index = () => {
                 an advocate for <span className="text-orange-400 font-semibold"><a href="https://layer5.io">Layer5</a></span> projects like <a href="https://docs.kanvas.new">Kanvas</a>, 
                 I'm deeply involved in the cloud native ecosystem.
               </p>
-              <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">But life’s not all code and containers.</p>
+              <p className="text-lg text-blue-100 leading-relaxed">
+                With hands-on experience across <span className="text-orange-400 font-semibold">Google Cloud Platform, AWS, and Azure</span>, I design and operate multi-cloud infrastructure that is secure, observable, and highly available. My day-to-day involves Kubernetes, Terraform, and Go — with a strong focus on automation and GitOps workflows.
+              </p>
+              <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">But life's not all code and containers.</p>
               <p className="text-lg text-blue-100 leading-relaxed">
                 When I'm not managing Kubernetes clusters or writing Go code, you'll find me 
-                hiking through Mexico's stunning landscapes or sharing my adventures with my beloved dogs.
+                hiking through Mexico's stunning landscapes, exploring the Guatemalan countryside with my beloved dogs, or organizing the local tech community through meetups and workshops.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-800/50 to-orange-900/30 p-8 rounded-2xl border border-blue-500/20">
@@ -254,7 +289,7 @@ const Index = () => {
             Whether you want to discuss Kubernetes, open source contributions, or share hiking stories, 
             ¡Me encantaría saber de usted!
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center flex-wrap">
             <Button 
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold transition-all duration-300 hover:scale-105"
@@ -262,6 +297,23 @@ const Index = () => {
             >
               <Github className="mr-2 h-5 w-5" />
               GitHub
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-slate-400 text-slate-200 hover:bg-slate-600 hover:text-white transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://x.com/simihablo', '_blank')}
+            >
+              <X className="mr-2 h-5 w-5" />
+              X / Twitter
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-orange-600 text-orange-300 hover:bg-orange-600 hover:text-white transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
+            >
+              Reddit
             </Button>
 {/*             <Button 
               size="lg"
@@ -280,7 +332,7 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-blue-500/20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-blue-300">
-            © 2025 Mericio • Infrastructure Engineer • Guatemala 🇬🇹
+            © 2025 Mericio Salazar • Infrastructure Engineer • Guatemala 🇬🇹
           </p>
           <p className="text-sm text-blue-400 mt-2">
             Built with ❤️ using React, TypeScript, and Tailwind CSS
