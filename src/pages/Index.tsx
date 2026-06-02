@@ -1,4 +1,11 @@
 import { Github, Linkedin, ArrowDown, X } from 'lucide-react';
+
+const RedditIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0"/>
+    <path d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.992 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.992 20 10z"/>
+  </svg>
+);
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -138,6 +145,7 @@ const Index = () => {
               className="border-orange-600 text-orange-300 hover:bg-orange-600 hover:text-white transition-all duration-300"
               onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
             >
+              <RedditIcon className="mr-2 h-4 w-4" />
               Reddit
             </Button>
             <Button 
@@ -313,6 +321,7 @@ const Index = () => {
               className="border-orange-600 text-orange-300 hover:bg-orange-600 hover:text-white transition-all duration-300 hover:scale-105"
               onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
             >
+              <RedditIcon className="mr-2 h-5 w-5" />
               Reddit
             </Button>
 {/*             <Button 
