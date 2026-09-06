@@ -6,11 +6,11 @@ import { Badge } from '@/components/ui/badge';
 
 const DogsAndDevops = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="site-page">
       {/* Header */}
-      <header className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-8">
+      <header className="site-header py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <Link to="/blog" className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors mb-6">
+          <Link to="/blog" className="inline-flex items-center text-amber-300 hover:text-amber-200 transition-colors mb-6">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
