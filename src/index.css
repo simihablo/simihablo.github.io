@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 33% 96%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 158 64% 26%;
+    --primary-foreground: 48 100% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 32% 92%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 20% 91%;
+    --muted-foreground: 215 16% 36%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 74% 85%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 22% 84%;
+    --input: 35 22% 84%;
+    --ring: 158 64% 26%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -98,6 +98,23 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .site-home {
+    background:
+      radial-gradient(circle at 16% 12%, rgb(16 185 129 / 0.16), transparent 24rem),
+      radial-gradient(circle at 88% 24%, rgb(245 158 11 / 0.14), transparent 25rem),
+      linear-gradient(145deg, #020617 0%, #0f2e2b 52%, #172554 100%);
+  }
+
+  .site-page {
+    @apply min-h-screen bg-stone-50 text-slate-900;
+  }
+
+  .site-header {
+    @apply border-b border-emerald-400/15 bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-900 text-white;
   }
 }

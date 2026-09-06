@@ -10,6 +10,7 @@ import HikingOaxacaAdventure from "./pages/blog/HikingOaxacaAdventure";
 import KubernetesMonitoringKanvas from "./pages/blog/KubernetesMonitoringKanvas";
 import OpenSourceContributionsMeshery from "./pages/blog/OpenSourceContributionsMeshery";
 import DogsAndDevops from "./pages/blog/DogsAndDevops";
+import NewBlogPost from "./pages/blog/NewBlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/blog/kubernetes-monitoring-kanvas" element={<KubernetesMonitoringKanvas />} />
           <Route path="/blog/open-source-contributions-meshery" element={<OpenSourceContributionsMeshery />} />
           <Route path="/blog/dogs-and-devops" element={<DogsAndDevops />} />
+          <Route path="/blog/:slug" element={<NewBlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

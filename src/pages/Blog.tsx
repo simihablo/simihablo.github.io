@@ -4,9 +4,11 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { newBlogPosts } from '@/content/newBlogPosts';
 
 const Blog = () => {
   const blogPosts = [
+    ...newBlogPosts,
     {
       id: 'hiking-oaxaca-adventure',
       title: 'Hiking Through Oaxaca: A 5-Day Adventure with My Dogs',
@@ -51,6 +53,8 @@ const Blog = () => {
       case 'Technical': return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'Open Source': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'Personal': return 'bg-green-100 text-green-800 border-green-200';
+      case 'AI': return 'bg-violet-100 text-violet-800 border-violet-200';
+      case 'Camping': return 'bg-emerald-100 text-emerald-800 border-emerald-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
@@ -58,31 +62,31 @@ const Blog = () => {
   console.log('Blog component rendering');
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="site-page">
       {/* Header */}
-      <header className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-12">
+      <header className="site-header py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
-            <Link to="/" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+            <Link to="/" className="text-amber-300 hover:text-amber-200 transition-colors">
               ← Back to Home
             </Link>
           </div>
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 via-amber-200 to-emerald-200 bg-clip-text text-transparent">
             Blog
           </h1>
           <p className="text-xl text-blue-100 max-w-2xl">
-            Thoughts on infrastructure, open source, hiking adventures, and life with dogs.
+            Thoughts on AI, infrastructure, open source, hiking adventures, camping, and life with dogs.
           </p>
         </div>
       </header>
 
       {/* Blog Posts */}
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid gap-8">
+        <div className="grid gap-6">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="hover:shadow-lg transition-shadow duration-300 border-gray-200">
+            <Card key={post.id} className="overflow-hidden border-stone-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-950/10">
               <CardHeader>
-                <div className="flex items-center justify-between mb-2">
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
                   <Badge className={getCategoryColor(post.category)}>
                     {post.category}
                   </Badge>
@@ -95,18 +99,18 @@ const Blog = () => {
                     })}
                   </div>
                 </div>
-                <CardTitle className="text-2xl text-gray-900 hover:text-blue-600 transition-colors">
+                <CardTitle className="text-2xl text-slate-900 hover:text-emerald-700 transition-colors">
                   <Link to={`/blog/${post.id}`}>
                     {post.title}
                   </Link>
                 </CardTitle>
-                <CardDescription className="text-gray-600 text-base leading-relaxed">
+                <CardDescription className="text-slate-600 text-base leading-relaxed">
                   {post.excerpt}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex min-w-0 flex-wrap gap-2">
                     {post.tags.map((tag) => (
                       <Badge key={tag} variant="outline" className="text-xs">
                         {tag}
