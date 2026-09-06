@@ -1,4 +1,11 @@
-import { Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, ArrowDown, X } from 'lucide-react';
+
+const RedditIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="10" fill="currentColor" fillOpacity="0"/>
+    <path d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.992 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.992 20 10z"/>
+  </svg>
+);
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +36,21 @@ const Index = () => {
       title: "MeshMate",
       description: "I am a Layer5 MeshMate. I am an advocate for infrastructure management and visualization using Kanvas for cloud native applications.",
       tech: ["Kanvas", "Infrastructure", "Visualization"]
+    },
+    {
+      title: "Kubernetes Home Lab",
+      description: "Self-hosted Kubernetes cluster running on bare metal for personal experimentation, learning, and running production-grade workloads at home.",
+      tech: ["Kubernetes", "Bare Metal", "Networking", "Linux"]
+    },
+    {
+      title: "GCP Infrastructure Automation",
+      description: "Terraform modules and CI/CD pipelines for automating Google Cloud Platform infrastructure provisioning and management at scale.",
+      tech: ["Terraform", "GCP", "CI/CD", "IaC"]
+    },
+    {
+      title: "Open Source DevRel",
+      description: "Developer relations work for the CNCF ecosystem — creating tutorials, writing documentation, and speaking at community events to grow cloud native adoption.",
+      tech: ["CNCF", "Community", "Documentation", "Speaking"]
     }
   ];
 
@@ -78,7 +100,7 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-emerald-300 via-amber-300 to-sky-300 bg-clip-text text-transparent">
-              Mericio
+              Mericio Salazar
             </h1>
             <p className="text-xl md:text-2xl text-slate-100 mb-4">
               Infrastructure Engineer
@@ -91,7 +113,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="flex gap-4 justify-center mb-12 animate-scale-in">
+          <div className="flex flex-wrap justify-center gap-4 mb-12 animate-scale-in">
             <Button 
               size="lg" 
               className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold transition-all duration-300 hover:scale-105"
@@ -108,6 +130,24 @@ const Index = () => {
             >
               <Github className="mr-2 h-4 w-4" />
               GitHub
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-sky-400/70 text-sky-200 hover:bg-sky-300 hover:text-slate-950 transition-all duration-300"
+              onClick={() => window.open('https://x.com/simihablo', '_blank')}
+            >
+              <X className="mr-2 h-4 w-4" />
+              X
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-amber-400/70 text-amber-200 hover:bg-amber-300 hover:text-slate-950 transition-all duration-300"
+              onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
+            >
+              <RedditIcon className="mr-2 h-4 w-4" />
+              Reddit
             </Button>
             <Button 
               size="lg" 
@@ -135,7 +175,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-slate-100 leading-relaxed">
-                I'm an infrastructure engineer based in beautiful Guatemala, passionate about 
+                I'm <span className="text-amber-300 font-semibold">Mericio Salazar</span>, an infrastructure engineer based in beautiful Guatemala, passionate about
                 building robust, scalable systems using cutting-edge cloud native technologies.
               </p>
               <p className="text-lg text-slate-100 leading-relaxed">
@@ -143,10 +183,13 @@ const Index = () => {
                 an advocate for <span className="text-emerald-300 font-semibold"><a href="https://layer5.io">Layer5</a></span> projects like <a className="text-sky-300" href="https://docs.kanvas.new">Kanvas</a>,
                 I'm deeply involved in the cloud native ecosystem.
               </p>
+              <p className="text-lg text-slate-100 leading-relaxed">
+                With hands-on experience across <span className="text-emerald-300 font-semibold">Google Cloud Platform, AWS, and Azure</span>, I design and operate multi-cloud infrastructure that is secure, observable, and highly available. My day-to-day involves Kubernetes, Terraform, and Go — with a strong focus on automation and GitOps workflows.
+              </p>
               <p  className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">But life’s not all code and containers.</p>
               <p className="text-lg text-slate-100 leading-relaxed">
                 When I'm not managing Kubernetes clusters or writing Go code, you'll find me 
-                hiking through Mexico's stunning landscapes or sharing my adventures with my beloved dogs.
+                hiking through Mexico's stunning landscapes, exploring the Guatemalan countryside with my beloved dogs, or organizing the local tech community through meetups and workshops.
               </p>
             </div>
             <div className="bg-slate-950/40 p-8 rounded-3xl border border-emerald-400/20 shadow-2xl shadow-slate-950/20">
@@ -255,7 +298,7 @@ const Index = () => {
             Whether you want to discuss Kubernetes, open source contributions, or share hiking stories, 
             ¡Me encantaría saber de usted!
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center flex-wrap">
             <Button 
               size="lg"
               className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-semibold transition-all duration-300 hover:scale-105"
@@ -263,6 +306,24 @@ const Index = () => {
             >
               <Github className="mr-2 h-5 w-5" />
               GitHub
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-slate-400 text-slate-200 hover:bg-slate-600 hover:text-white transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://x.com/simihablo', '_blank')}
+            >
+              <X className="mr-2 h-5 w-5" />
+              X / Twitter
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-orange-600 text-orange-300 hover:bg-orange-600 hover:text-white transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://www.reddit.com/user/MelodicClaim890/', '_blank')}
+            >
+              <RedditIcon className="mr-2 h-5 w-5" />
+              Reddit
             </Button>
 {/*             <Button 
               size="lg"
@@ -281,7 +342,7 @@ const Index = () => {
       <footer className="py-8 px-4 border-t border-emerald-400/20">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-slate-300">
-            © 2025 Mericio • Infrastructure Engineer • Guatemala 🇬🇹
+            © 2025 Mericio Salazar • Infrastructure Engineer • Guatemala 🇬🇹
           </p>
           <p className="text-sm text-emerald-200 mt-2">
             Built with ❤️ using React, TypeScript, and Tailwind CSS
